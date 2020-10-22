@@ -1,11 +1,14 @@
 import React, {Fragment} from 'react';
 import { graphql } from 'gatsby';
-import Header from "../components/Header";
+import Layout from "../components/Layout/Layout";
+import Trending from "../components/Trending/Trending";
 
 function index() {
     return (
         <Fragment>
-            <Header/>
+            <Layout>
+                <Trending/>
+            </Layout>
         </Fragment>
     )
 }
