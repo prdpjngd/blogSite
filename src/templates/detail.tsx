@@ -102,6 +102,34 @@ export default ({data}) => {
           </div>
         </div>
 
+        <div className="footer__black_detail">
+          <div className="footer__iner_box">
+            <div className="footer__iner_item">
+              <div className="footer_upercase_area">
+                <div className="footer_text_area_main">
+                  <div className="footer_per_item">
+                    <h2 className="main_headeing_footer">Learn More</h2>
+                    <h4 className="main_detail_footer">
+                    Medium is an open platform where 170 million readers come to find insightful and dynamic thinking. Here, expert and undiscovered voices alike dive into the heart of any topic and bring new ideas to the surface. Learn more
+                    </h4>
+                  </div>
+                  <div className="footer_per_item">
+                    <h2 className="main_headeing_footer">Make Medium Yours</h2>
+                    <h4 className="main_detail_footer">
+                    Follow the writers, publications, and topics that matter to you, and you’ll see them on your homepage and in your inbox. Explore
+                    </h4>
+                  </div>
+                  <div className="footer_per_item">
+                    <h2 className="main_headeing_footer">Share your Thinking</h2>
+                    <h4 className="main_detail_footer">
+                    If you have a story to tell, knowledge to share, or a perspective to offer — welcome home. It’s easy and free to post your thinking on any topic. Write on Medium                    </h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </Layout>
     )
 }

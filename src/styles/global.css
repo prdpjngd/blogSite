@@ -441,12 +441,16 @@ a{
     flex-direction: column;
     margin-top: 40px;
     clear: both;
+    align-items: center;
+        margin-bottom: 40px;
 }
 
 .inner__end_article{
     max-width: 680px;
     width: 100%;
     min-width: 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(230, 230, 230, 1);
 }
 
 .inner_end_article_tag_area{
@@ -478,12 +482,71 @@ a{
     font-weight: 400;
 }
 
+.footer__black_detail{
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 60px 0;
+}
+
+.footer__iner_box{
+    justify-content: center;
+    display: flex;
+}
+
+.footer__iner_item{
+    max-width: 1192px;
+    min-width: 0;
+    width: 100%
+}
+
+.footer_upercase_area{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.54);
+    padding-bottom: 48px;
+    margin-bottom: 32px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.footer_text_area_main{
+    justify-content: space-between;
+    display: flex;
+    margin: 0 -12px;
+}
+
+.footer_per_item{
+    flex: 1 1 0;
+    margin: 0 12px;
+}
+
+.main_headeing_footer{
+    color: rgba(255, 255, 255, 0.98);
+    line-height: 24px;
+    font-size: 20px;
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 0;
+    font-weight: 500;
+    padding-bottom: 8px;
+    margin: 0;
+}
+
+.main_detail_footer{
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+}
+
 @media(min-width: 1080px){
     .grid__wrapping{
         grid-column-gap: 32px;
         grid-template-columns: repeat(8,1fr) repeat(4, minmax(48px, 1fr));
         grid-column: 1 / span 7;
         grid-row-start: 1;
+    }
+
+    .footer__iner_item{
+        margin: 0 64px;
     }
 
     .inner__end_article{
@@ -567,6 +630,10 @@ a{
         max-width: 1192px;
     }
 
+    .footer__iner_item{
+        margin: 0 64px;
+    }
+
     .body__details_area_inner{
         margin: 0 64px;
     }
@@ -627,6 +694,10 @@ a{
         margin: 0 48px;
     }
 
+    .footer__iner_item{
+        margin: 0 48px;
+    }
+
     .inner__end_article{
         margin: 0 48px;
     }
@@ -664,6 +735,10 @@ a{
     }
 
     .body__details_area_inner{
+        margin: 0 24px;
+    }
+
+    .footer__iner_item{
         margin: 0 24px;
     }
 
@@ -714,6 +789,10 @@ a{
         line-height: 28px;
         font-size: 22px;
         margin-top: 0.93em;
+    }
+
+    .footer__iner_item{
+        margin: 0 24px;
     }
 
     .inner__end_article{
