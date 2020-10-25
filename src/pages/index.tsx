@@ -4,10 +4,12 @@ import Layout from "../components/Layout/Layout";
 import Trending from "../components/Trending/Trending";
 import BlogIndex from "../components/BlogIndex/BlogIndex";
 import Sidebar from "../components/Sidebar/Sidebar";
+import Seo from "../components/Seo/Seo";
 
 function index({data}) {
     return (
         <Fragment>
+            <Seo title={'Home'}/>
             <Layout>
                 <div className="TrendingBox">
                     <div className="Box__inner">

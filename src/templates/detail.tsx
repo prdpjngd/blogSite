@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from "../components/Layout/Layout";
 import AlertHeader from "../components/AlertHeader/AlertHeader";
+import Seo from "../components/Seo/Seo";
 import TurnedInNotOutlinedIcon from '@material-ui/icons/TurnedInNotOutlined';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
@@ -12,6 +13,7 @@ export default ({data}) => {
   const {node} = data.allContentfulBlogPost.edges[0];
     return (
       <Layout>
+        <Seo title={node.title}/>
         <article className="messager_box_area">
           <AlertHeader/>
           <div>
