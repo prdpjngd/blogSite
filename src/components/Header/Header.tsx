@@ -5,7 +5,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Badge from '@material-ui/core/Badge';
 import Button from '@material-ui/core/Button';
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image";
 import logo from "../../assets/img/logo.svg";
 
@@ -61,9 +61,11 @@ const Header = (props: Props) => {
         <div className={classes.root}>
             <AppBar position="static" classes={{root: classes.bg}}>
                 <Toolbar classes={{root : classes.tool}}>
-                <Typography variant="h4" className={classes.title}>
-                  <img src={logo} alt='logo' className="logo"/>
-                </Typography>
+                  <Typography variant="h4" className={classes.title}>
+                    <Link to="/">
+                      <img src={logo} alt='logo' className="logo"/>
+                    </Link>
+                  </Typography>
                 <div className={classes.buttonArea}>
                 <Button color="inherit" classes={{root: classes.buttontext}}>Our Story</Button>
                 <Button color="inherit" classes={{root: classes.buttontext}}>Membership</Button>
