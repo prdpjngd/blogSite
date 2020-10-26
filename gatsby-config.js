@@ -1,6 +1,9 @@
 const dotenv = require("dotenv");
 dotenv.config();
 
+const space_id = "j74p2h1xp6bv";
+const access_token = "K5lrhVQT2vPP6YIonzxtjdBVFiYtnKivSzmaiYuAhdc" ;
+
 module.exports = {
     siteMetadata: {
       title: `Medium`,
@@ -12,11 +15,18 @@ module.exports = {
         `gatsby-plugin-sharp`,
         `gatsby-transformer-sharp`,
         `gatsby-plugin-react-helmet`,
+        `gatsby-transformer-remark`,
         {
             resolve: `gatsby-source-contentful`,
             options: {
-              spaceId: `j74p2h1xp6bv`,
-              accessToken: `K5lrhVQT2vPP6YIonzxtjdBVFiYtnKivSzmaiYuAhdc`,
+              spaceId: space_id,
+              accessToken: access_token,
+              host : "cdn.contentful.com",
+              environment : "master",
+              downloadLocal : false,
+              forceFullSync : false,
+              pageLimit : 100,
+              useNameForId : true
             },
         },
         {

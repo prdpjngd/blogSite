@@ -13,7 +13,6 @@ exports.createPages = async ({ graphql, actions }) => {
         }
     }
   `)
-  console.log(result);
   result.data.allContentfulBlogPost.edges.map(edge => {
     createPage({
         path: `/${edge.node.slug}`,

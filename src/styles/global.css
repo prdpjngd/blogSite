@@ -537,12 +537,153 @@ a{
     margin: 0;
 }
 
+.modal_Bg{
+    animation: 300ms cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 normal forwards running k3;
+    scroll-behavior: smooth;
+    z-index: 800;
+    bottom: 0px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: rgba(255, 255, 255, 0.95);
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.modal_box{
+    transform-origin: center bottom;
+    animation: 300ms cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 normal forwards running k4;
+    margin-bottom: auto;
+    margin-top: auto;
+    padding: 0px;
+}
+
+.modal_box__iner{
+    width: 678px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 10px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 4px;
+    position: relative;
+}
+
+.modal_box_close_box{
+    margin: 12px;
+    position: absolute;
+    right: 0;
+}
+
+.close_box_button{
+    fill: inherit;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    overflow: visible;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+}
+
+.modal_main_part{
+    background: white;
+    min-height: 695px;
+    height: 100%;
+    border-radius: 4px;
+    justify-content: space-between;
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+}
+
+.modal__inner_portion{
+    padding: 44px 56px;
+    display: flex;
+    flex-direction : column;
+    align-items: center;
+    justify-content: center;
+    flex: 1 0 auto;
+    text-align: center;
+}
+
+.medium_login_text{
+    color: rgb(8, 8, 8);
+    font-feature-settings: "pnum", "lnum";
+    letter-spacing: -0.03em;
+    line-height: 32px;
+    font-size: 28px;
+    font-family: gt-super, Georgia, Cambria, "Times New Roman", Times, serif;
+    font-weight: 400;
+}
+
+.SignIn_button_area{
+    margin-top: 50px;
+}
+
+.login__button{
+    text-align: left;
+    padding: 7px 16px 9px;
+    background: rgba(255, 255, 255, 1);
+    display: inline-block;
+    border-style: solid;
+    border-radius: 4px;
+    border-width: 1px;
+    color: rgba(41, 41, 41, 1);
+    font-size: 14px;
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 20px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.shade__for_Hide{
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 1));
+    height: 250px;
+    margin-top: -240px;
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.message_box_for_signin{
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.message_box_for_signin_inner{
+    max-width: 760px;
+    margin: auto;
+}
+
+.message_box_for_signin_inner_outer{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.message__box_boundary{
+    padding: 48px 56px;
+}
+
+.message_first_line{
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: rgba(8, 8, 8, 1);
+    font-family: gt-super, Georgia, Cambria, "Times New Roman", Times, serif;
+    font-weight: 400;
+}
+
 @media(min-width: 1080px){
     .grid__wrapping{
         grid-column-gap: 32px;
         grid-template-columns: repeat(8,1fr) repeat(4, minmax(48px, 1fr));
         grid-column: 1 / span 7;
         grid-row-start: 1;
+    }
+
+    .message_first_line{
+        letter-spacing: -0.03em;
+        font-size: 28px;
+        line-height: 32px;
     }
 
     .footer__iner_item{
@@ -611,6 +752,11 @@ a{
         grid-template-columns: repeat(8,1fr) repeat(4, minmax(48px, 1fr));
     }
 
+    .modal_box__iner{
+        width: 678px;
+        height: auto;
+    }
+
     .body_details h1 {
         letter-spacing: 0;
         line-height: 36px;
@@ -672,6 +818,11 @@ a{
         max-height: none;
     }
 
+    .modal_box__iner{
+        width: 600px;
+        height: auto;
+    }
+
     .body_details p{
         margin-top: 2em;
         font-size: 21px;
@@ -725,6 +876,18 @@ a{
         line-height: 20px;
         font-size: 16px;
         overflow: hidden;
+    }
+
+    .modal_box__iner{
+        width: 100vw !important;
+        height: 100vh !important;
+        border-radius: 0;
+    }
+
+    .message_first_line{
+        letter-spacing: -0.02em;
+        font-size: 24ƒ√px;
+        line-height: 28px;
     }
 
     .body_details h1 {
