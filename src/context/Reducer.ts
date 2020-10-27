@@ -1,5 +1,6 @@
 
 export const Reducer = (state, action) => {
+    console.log(action);
     switch(action.type) {
         case "OPEN_MODAL":
             return {

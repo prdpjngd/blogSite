@@ -650,6 +650,89 @@ a{
     background-color: rgba(255, 255, 255, 1);
 }
 
+.picture__round{
+    display: flex;
+}
+
+.picture__round_circle{
+    align-items: center;
+    display: flex;
+}
+
+.button__circle_user{
+    margin: 0;
+    padding: 0;
+    fill: inherit;
+    font-family: inherit;
+    letter-spacing: inherit;
+    border: none;
+    cursor: pointer;
+}
+
+.image__user{
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    display: block;
+}
+
+.dropdown__background{
+    bottom: 0px;
+    top: 0;
+    left:0;
+    right: 0;
+    z-index: 500;
+    position: absolute;
+}
+
+.main__dropdown{
+    position: absolute;
+    will-change: transform;
+    top: 0px;
+    left: 0px;
+    transform: translate3d(629px, 73px, 0px);
+    margin-top: 15px;
+    z-index: 700;
+    box-shadow: rgb(230, 230, 230) 0px 1px 4px;
+    border: 1px solid rgb(230, 230, 230);
+    margin-right: inherit;
+    margin-left: inherit;
+    margin-bottom: inherit;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.dropdown__name{
+    overflow-y: auto;
+    max-height: 512.5px;
+    background: rgb(255, 255, 255);
+    border-radius: 4px;
+}
+
+.dropdown__inner{
+    background: rgb(255, 255, 255);
+    border-radius: 3px;
+    max-width: 240px;
+}
+
+.dropdown_ul_list{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    padding: 0;
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+}
+
+.dropdown_li{
+    padding: 8px 20px;
+    display: block;
+}
+
 .message_box_for_signin_inner{
     max-width: 760px;
     margin: auto;

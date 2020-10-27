@@ -10,6 +10,7 @@ import Img from "gatsby-image";
 import logo from "../../assets/img/logo.svg";
 import Modal from "../Modal/Modal";
 import {ActionContext} from "../../context/GlobalState";
+import {auth} from "../../services/firebase";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -56,7 +57,7 @@ interface Props {
 }
 
 const Header = (props: Props) => {
-    const {dispatch, loginModal, authenticated} = useContext(ActionContext);
+    const {dispatch, loginModal, authenticated, user} = useContext(ActionContext);
     const classes = useStyles();
 
     const handleClose = () => {
@@ -71,6 +72,16 @@ const Header = (props: Props) => {
       })
     }
 
+    const logout = () => {
+      auth().signOut().then(function() {
+        dispatch({
+          type: "LOGOUT"
+        })
+      }).catch(function(error) {
+        console.log(error)
+      });
+    }
+
     return (
       <>
         <div className={classes.root}>
@@ -82,7 +93,7 @@ const Header = (props: Props) => {
                       </Link>
                     </Typography>
                     {
-                    !authenticated && 
+                    !authenticated ?
                     <div className={classes.buttonArea}>
                       <Button color="inherit" classes={{root: classes.buttontext}}>Our Story</Button>
                       <Button color="inherit" classes={{root: classes.buttontext}}>Membership</Button>
@@ -90,6 +101,17 @@ const Header = (props: Props) => {
                         <button className="roundBorderedButton" onClick={handleOpen}>
                           Get Started
                         </button>
+                    </div>
+                    :
+                    <div className={classes.buttonArea}>
+                      <Button color="inherit" onClick={logout} classes={{root: classes.buttontext}}>Logout</Button>
+                      <div className="picture__round">
+                        <div className="picture__round_circle">
+                          <button className="button__circle_user">
+                            <img src={user.photoURL} alt={user.displayName} className="image__user"/>
+                          </button>
+                        </div>
+                      </div>
                     </div>
                     }
                   </Toolbar>
