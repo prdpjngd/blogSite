@@ -1,5 +1,6 @@
-require("dotenv").config()
-
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 const space_id = process.env.GATSBY_CONTENTFUL_SPACE_ID;
 const access_token = process.env.GATSBY_CONTENTFUL_ACCESS_TOKEN;
 
