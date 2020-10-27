@@ -1,8 +1,4 @@
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
-const space_id = process.env.GATSBY_CONTENTFUL_SPACE_ID;
-const access_token = process.env.GATSBY_CONTENTFUL_ACCESS_TOKEN;
+require("dotenv").config()
 
 module.exports = {
     siteMetadata: {
@@ -19,8 +15,8 @@ module.exports = {
         {
             resolve: `gatsby-source-contentful`,
             options: {
-              spaceId: space_id,
-              accessToken: access_token,
+              spaceId: process.env.GATSBY_CONTENTFUL_SPACE_ID,
+              accessToken: process.env.GATSBY_CONTENTFUL_ACCESS_TOKEN,
               host : "cdn.contentful.com",
               environment : "master",
               downloadLocal : false,
