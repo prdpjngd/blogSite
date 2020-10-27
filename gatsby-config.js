@@ -1,8 +1,7 @@
-const dotenv = require("dotenv");
-dotenv.config();
+require("dotenv").config()
 
-const space_id = "j74p2h1xp6bv";
-const access_token = "K5lrhVQT2vPP6YIonzxtjdBVFiYtnKivSzmaiYuAhdc" ;
+const space_id = process.env.GATSBY_CONTENTFUL_SPACE_ID;
+const access_token = process.env.GATSBY_CONTENTFUL_ACCESS_TOKEN;
 
 module.exports = {
     siteMetadata: {
