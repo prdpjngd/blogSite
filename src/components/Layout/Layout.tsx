@@ -10,9 +10,7 @@ const Layout = ({children}) => {
         let unsubscribe = false;
         const checkUser = async () => {
             await auth().onAuthStateChanged((user) => {
-                console.log(user);
                 if (!unsubscribe && user) {
-                    console.log('dispatched')
                     dispatch({
                         type: "LOGIN",
                         payload : {

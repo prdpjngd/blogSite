@@ -3,11 +3,9 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Badge from '@material-ui/core/Badge';
 import Button from '@material-ui/core/Button';
-import { Link } from "gatsby"
-import Img from "gatsby-image";
-import logo from "../../assets/img/logo.svg";
+import { Link } from "gatsby";
+import logo from "../../images/logo.svg";
 import Modal from "../Modal/Modal";
 import {ActionContext} from "../../context/GlobalState";
 import {auth} from "../../services/firebase";
@@ -89,7 +87,7 @@ const Header = (props: Props) => {
                   <Toolbar classes={{root : classes.tool}}>
                     <Typography variant="h4" className={classes.title}>
                       <Link to="/">
-                        <img src={logo} alt='logo' className="logo"/>
+                        <img src={logo} alt='logo' className="logo" width="49" height="49"/>
                       </Link>
                     </Typography>
                     {
@@ -108,7 +106,7 @@ const Header = (props: Props) => {
                       <div className="picture__round">
                         <div className="picture__round_circle">
                           <button className="button__circle_user">
-                            <img src={user.photoURL} alt={user.displayName} className="image__user"/>
+                            <img src={user.photoURL} alt={user.displayName} className="image__user" width="32" height="32" />
                           </button>
                         </div>
                       </div>
